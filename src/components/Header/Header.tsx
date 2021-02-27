@@ -23,9 +23,9 @@ const Header = (): JSX.Element => {
               exact
               className="nav__link"
               activeClassName="nav__link--active"
-              to="/documents"
+              to="/users"
             >
-              Documents
+              Users
             </NavLink>
           </li>
           <li className="nav__list">

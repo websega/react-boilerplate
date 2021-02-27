@@ -1,26 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Switch } from 'react-router-dom';
+
+import fetchUsers from '../../redux/actions/user/user';
 
 import Home from '../Home';
 import About from '../About';
-import Documents from '../Documents';
+import Users from '../Users';
 
 import Header from '../Header';
 
 import './App.scss';
 
 const App = (): JSX.Element => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
+
   return (
     <div className="app">
       <Header />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/documents">
-          <Documents />
+        <Route exact path="/users">
+          <Users />
         </Route>
-        <Route path="/about">
+        <Route exact path="/about">
           <About />
         </Route>
       </Switch>
