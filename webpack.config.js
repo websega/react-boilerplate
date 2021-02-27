@@ -46,13 +46,14 @@ const getStyleLoaders = (loader) => {
     },
     {
       loader: 'css-loader',
-      options: {
-        modules: {
-          localIdentName: isDev
-            ? '[path][name]__[local]--[contenthash:base64:5]'
-            : '[contenthash:base64]',
-        },
-      },
+      // Если вы хотите использовать css модули раскоментируйте строки ниже
+      // options: {
+      //   modules: {
+      //     localIdentName: isDev
+      //       ? '[path][name]__[local]--[contenthash:base64:5]'
+      //       : '[contenthash:base64]',
+      //   },
+      // },
     },
     {
       loader: 'postcss-loader',

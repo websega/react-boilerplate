@@ -1,8 +1,8 @@
 ## react-start-template
 
----
 
-#### Scripts client
+
+#### Scripts
 
 - Install packages `npm i`
 - Start dev-server `npm run start`
