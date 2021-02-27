@@ -10,7 +10,7 @@ import Users from '../Users';
 
 import Header from '../Header';
 
-import './App.scss';
+import './App.css';
 
 const App = (): JSX.Element => {
   const dispatch = useDispatch();

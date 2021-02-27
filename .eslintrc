@@ -67,6 +67,7 @@
   "settings": {
     "import/parsers": { "@typescript-eslint/parser": [".ts", ".tsx"] },
     "import/resolver": "webpack",
+    "import/ignore": ".(css)$",
     "react": {
       "pragma": "React",
       "version": "detect"
