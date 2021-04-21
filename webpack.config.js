@@ -46,14 +46,17 @@ const getStyleLoaders = (loader) => {
     },
     {
       loader: 'css-loader',
-      // Если вы хотите использовать css модули раскоментируйте строки ниже
-      // options: {
-      //   modules: {
-      //     localIdentName: isDev
-      //       ? '[path][name]__[local]--[contenthash:base64:5]'
-      //       : '[contenthash:base64]',
-      //   },
-      // },
+      // модули CSS испльзуйте как
+      // import classes from './name.modules.scss'
+      // <Component className={classes.name}/>
+      options: {
+        modules: {
+          auto: true,
+          localIdentName: isDev
+            ? '[path][name]__[local]--[contenthash:base64:5]'
+            : '[contenthash:base64]',
+        },
+      },
     },
     {
       loader: 'postcss-loader',
